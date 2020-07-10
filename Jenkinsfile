@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-          bat 'pip install -r requirements.txt',
-          echo "Ho gya bhai run"
+          sh 'pip install -r requirements.txt',
+          echo "Success "
       }
     }
   }
