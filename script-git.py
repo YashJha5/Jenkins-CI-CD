@@ -18,7 +18,7 @@ data = date_string.split()
 
 #print("Last Commited Date:",data[0])
 print(data[0]==taareekh)
-if (data[0] == today):
+if (data[0] == taareekh):
     print("Yusss Now we can build the setup")
 else:
     sys.exit(-1)
