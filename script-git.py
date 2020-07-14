@@ -1,5 +1,6 @@
 from subprocess import check_output
 from datetime import date
+import sys
 
 today = date.today()
 
@@ -19,6 +20,7 @@ data = date_string.split()
 print(data[0]==taareekh)
 if (data[0] == today):
     print("Yusss Now we can build the setup")
-else: 
-    False
+else:
+    sys.exit(-1)
+    
 
