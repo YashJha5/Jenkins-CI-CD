@@ -4,22 +4,25 @@ import sys
 
 today = date.today()
 
-taareekh = today.strftime('%Y-%m-%d')
-print("Today's date:",taareekh)
+persent_date = today.strftime('%Y-%m-%d')
+print("Today's date:",persent_date)
 
-date_string = check_output('git log -1 --pretty=format:"%ci"').decode()
+date_string = check_output('git log -1 --pretty=format:"%ci"'.split()).decode()
 
 
-#print(date_string)  // get the log of date
-data = date_string.split()
+
+
+#print(date_string)  #// get the log of date
+data1 = date_string.split(' ',-1)
+data = data1[0]
 #print(data)
-#print(data[0])
+print(data[1:])
 
 
 #print("Last Commited Date:",data[0])
-print(data[0]==taareekh)
-if (data[0] == taareekh):
-    print("Yusss Now we can build the setup")
+print(data[0]==persent_date)
+if (data[0] == persent_date):
+    print("Validation successfull")
 else:
     sys.exit(-1)
     
