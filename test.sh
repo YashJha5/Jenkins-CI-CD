@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Hello World"
-yum install python3 -y
+sudo yum install python3 -y
